@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md bg-dark">
-  <a href="#" class="navbar-brand"
+  <a href="/" class="navbar-brand"
     ><i class="material-symbols-outlined fs-1 text-success"> store </i></a
   >
   <button
@@ -19,11 +19,10 @@
           >Categories</a
         >
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="">Category1</a>
-          <a class="dropdown-item" href="">Category2</a>
-          <a class="dropdown-item" href="">Category3</a>
-          <a class="dropdown-item" href="">Category4</a>
-          <a class="dropdown-item" href="">Category5</a>
+          <a class="dropdown-item" href="{% url 'home' %}">All products</a>
+          {% for category in links %}
+          <a class="dropdown-item" href="{{category.get_url}}">{{category.name}}</a>
+          {% endfor %}
         </div>
       </li>
       <li class="nav-item">
