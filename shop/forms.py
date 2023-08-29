@@ -12,4 +12,4 @@ class SignUpForm(UserCreationForm):
     class Meata:
         model = User
         fields = ('first_name', 'last_name',
-                  'username', 'password1', 'password2')
+                  'username', 'password1', 'password2', 'email')
